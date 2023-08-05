@@ -12,6 +12,7 @@ app.get("/", (req, res) => {
   // Ottiene la data corrente.
   const today = new Date();
 
+
   // Ottiene il giorno della settimana (0 per Domenica, 1 per Lunedì, ..., 6 per Sabato).
   const day = today.getDay();
 
@@ -25,8 +26,8 @@ app.get("/", (req, res) => {
     adv = "it's time to have some fun";
   }
 
-  // Renderizza il template "solution.ejs" e passa i dati da visualizzare nella pagina.
-  res.render("solution.ejs", {
+  // Renderizza il template "index.ejs" e passa i dati da visualizzare nella pagina.
+  res.render("index.ejs", {
     dayType: type,
     advice: adv,
   });
